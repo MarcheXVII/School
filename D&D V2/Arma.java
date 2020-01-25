@@ -8,7 +8,7 @@ public class Arma {
 	public int danniElementali;
 	public boolean dueMani;
 	public float danno;  
-
+//qolppp
 	public Arma(){ 
 		nome="Spada divina"; 
 		DannoBase=(int) (Math.random()*8+1);
