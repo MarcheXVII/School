@@ -24,7 +24,9 @@ public class Personaggio {
 	public int modcos;
 	public int modint;
 	public int modsag;
-	public int modcar;
+	public int modcar; 
+	public Oggetto[]inventario;
+	public int DIM;
 
 	public Personaggio(Arma spad, Armatura armatur,String nom,String clas,String raz) {
 		livello=(int) (Math.random()*20+1);
@@ -51,7 +53,19 @@ public class Personaggio {
 		hp=((int) (Math.random()*10+1)+modcos)*livello;
 	}
 
+	public void inventario(){
+		int a= (int) (Math.random()*4+1);
+		DIM=10+modf;
+		inventario= new Oggetto[DIM];
 
+		for(int i=0;i<DIM;i++) {
+			if(inventario[i]==null) {
+				inventario[i]= new Pozione(a);
+				break;
+			}
+		}	
+
+	}
 
 
 
