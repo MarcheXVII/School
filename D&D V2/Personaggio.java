@@ -74,7 +74,13 @@ public class Personaggio {
 			if(this.txc>=pers.difesa) {
 				pers.hp-=(this.spada.danno+this.modf);
 				System.out.println("p1 ha un txc di "+this.txc+" quindi "+"fa un danno di "+(this.spada.danno+this.modf));
+			if(this.hp<0) { 
+				System.out.println("mi dispiace eroe ma hai subito una brutta sconfitta....cazzo l'ultimo salvataggio è corrotto ti toccherà ricominciare dall'inizio" );
+			}else {
+				if(pers.hp<0){
+					System.out.println("COMPLIMENTI EROE!!! SEI RIUSCITO A SCONFIGGERE IL TUO NEMICO... IL TUO NOME RIMARRÀ NELLA LEGGENDA ADDIRITTURA I NIPOTI DEI TUOI NIPOTI NARRERANNO LE TUE GESTA ");
 			}else { 
+				
 				System.out.println("p1 ha un txc di "+this.txc+" quindi "+"missa il colpo");
 			}
 			System.out.println(" ");
@@ -88,17 +94,17 @@ public class Personaggio {
 			if(pers.txc>=this.difesa) {
 				this.hp-=pers.spada.danno;
 				System.out.println("p2 ha un txc di  "+pers.txc+" quindi "+"fa un danno di "+(this.spada.danno+this.modf));
+			if(this.hp<0) { 
+				System.out.println("mi dispiace eroe ma hai subito una brutta sconfitta....cazzo l'ultimo salvataggio è corrotto ti toccherà ricominciare dall'inizio" );
+			}else {
+				if(pers.hp<0){
+					System.out.println("COMPLIMENTI EROE!!! SEI RIUSCITO A SCONFIGGERE IL TUO NEMICO... IL TUO NOME RIMARRÀ NELLA LEGGENDA ADDIRITTURA I NIPOTI DEI TUOI NIPOTI NARRERANNO LE TUE GESTA ");
 			}else {
 				System.out.println("p2 ha un txc di  "+pers.txc+" quindi "+"missa il colpo");
 
 			}
 			i++;
-			if(this.hp<0) { 
-				System.out.println("mi dispiace eroe ma hai subito una brutta sconfitta....cazzo l'ultimo salvataggio � corrotto ti toccher� ricominciare dall'inizio" );
-			}else {
-				if(pers.hp<0){
-					System.out.println("COMPLIMENTI EROE!!! SEI RIUSCITO A SCONFIGGERE IL TUO NEMICO... IL TUO NOME RIMARR� NELLA LEGGENDA ADDIRITTURA I NIPOTI DEI TUOI NIPOTI NARRERANNO LE TUE GESTA ");
-
+			
 				}
 			}
 		}while(this.hp>0 && pers.hp>0);
